@@ -11,6 +11,7 @@ import (
 )
 
 const cgroupMemoryHierarchyMount = "/sys/fs/cgroup/memory"
+const memoryLimit = "100m"
 
 func main() {
 	if os.Args[0] == "/proc/self/exe" {
@@ -41,7 +42,7 @@ func main() {
 		fmt.Printf("%v", cmd.Process.Pid)
 		os.Mkdir(path.Join(cgroupMemoryHierarchyMount, "testmemorylimit"), 0755)
 		ioutil.WriteFile(path.Join(cgroupMemoryHierarchyMount, "testmemorylimit", "tasks"), []byte(strconv.Itoa(cmd.Process.Pid)), 0644)
-		ioutil.WriteFile(path.Join(cgroupMemoryHierarchyMount, "testmemorylimit", "memory.limit_in_bytes"), []byte("100m"), 0644)
+		ioutil.WriteFile(path.Join(cgroupMemoryHierarchyMount, "testmemorylimit", "memory.limit_in_bytes"), []byte(memoryLimit), 0644)
 	}
 	cmd.Process.Wait()
 }
