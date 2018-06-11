@@ -1,9 +1,9 @@
 package container
 
 import (
+	"github.com/sirupsen/logrus"
 	"os"
 	"syscall"
-	"github.com/Sirupsen/logrus"
 )
 
 func RunContainerInitProcess(command string, args []string) error {

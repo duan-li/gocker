@@ -1,10 +1,10 @@
 package main
 
 import (
+	"./container"
 	"fmt"
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
-	"github.com/xianlubird/mydocker/container"
 )
 
 var runCommand = cli.Command{

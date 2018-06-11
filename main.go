@@ -1,10 +1,10 @@
 package main
 
 import (
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
 	"os"
-	)
+)
 
 const usage = `gocker is a simple container runtime implementation. 
 				The purpose of this project is to learn how docker works and how towrite a docker by ourselves.
