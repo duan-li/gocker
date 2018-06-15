@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./container"
 	"fmt"
+	"github.com/inputx/mydocker/container"
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
 )
