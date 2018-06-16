@@ -6,7 +6,7 @@ import (
 	"syscall"
 )
 
-// Create a paranet process
+// NewParentProcess : Create a paranet process
 func NewParentProcess(tty bool, command string) *exec.Cmd {
 	args := []string{"init", command}
 	cmd := exec.Command("/proc/self/exe", args...)
