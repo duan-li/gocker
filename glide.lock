@@ -1,6 +1,10 @@
-hash: 0ce2383f2555d6e2808947156ced1500a377e7e5957b9af986560b090f914259
-updated: 2018-06-15T12:09:34.169934601Z
+hash: 8c71f499a619428d49a6a36feed076eb44cb0bd08808e95536f2fcc64745e5aa
+updated: 2018-06-16T10:21:54.041067127Z
 imports:
+- name: github.com/dmgk/faker
+  version: 43454d133ca96960e67f5ecb86c9a67d9c7a145a
+  subpackages:
+  - locales
 - name: github.com/inputx/mydocker
   version: d7511e737733899663b274e508ebd2a4c833b362
   subpackages:
@@ -9,6 +13,10 @@ imports:
   version: c155da19408a8799da419ed3eeb0cb5db0ad5dbc
 - name: github.com/Sirupsen/logrus
   version: 446d1c146faa8ed3f4218f056fcd165f6bcfda81
+- name: github.com/stretchr/testify
+  version: f35b8ab0b5a2cef36673838d662e249dd9c94686
+  subpackages:
+  - assert
 - name: github.com/urfave/cli
   version: cfb38830724cc34fedffe9a2a29fb54fa9169cd1
 - name: golang.org/x/crypto
