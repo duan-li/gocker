@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/inputx/mydocker/container"
+	"github.com/inputx/gocker/container"
 	log "github.com/sirupsen/logrus"
 	"os"
 )

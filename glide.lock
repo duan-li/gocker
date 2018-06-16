@@ -1,10 +1,14 @@
-hash: 8c71f499a619428d49a6a36feed076eb44cb0bd08808e95536f2fcc64745e5aa
-updated: 2018-06-16T10:21:54.041067127Z
+hash: 03bc44c5198f96587d369ef9b32cef2412c65e00a694144cf871fbea08d6da2f
+updated: 2018-06-16T13:28:32.277132271Z
 imports:
 - name: github.com/dmgk/faker
   version: 43454d133ca96960e67f5ecb86c9a67d9c7a145a
   subpackages:
   - locales
+- name: github.com/inputx/gocker
+  version: 60301a668443b17c09fe7706e7e50503eba6eb99
+  subpackages:
+  - container
 - name: github.com/inputx/mydocker
   version: d7511e737733899663b274e508ebd2a4c833b362
   subpackages:
@@ -28,4 +32,12 @@ imports:
   subpackages:
   - unix
   - windows
-testImports: []
+testImports:
+- name: github.com/davecgh/go-spew
+  version: 8991bc29aa16c548c550c7ff78260e27b9ab7c73
+  subpackages:
+  - spew
+- name: github.com/pmezard/go-difflib
+  version: 792786c7400a136282c1664665ae0a8db921c6c2
+  subpackages:
+  - difflib
