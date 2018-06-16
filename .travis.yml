@@ -3,6 +3,7 @@ language: go
 go:
   - 1.9.x
   - master
+  - tip
 
 sudo: false
 
@@ -15,10 +16,11 @@ install:
   - glide install
 
 script:
+  - ls
   - go test ./...
   - go build .
-  - go test -v -covermode=count -coverprofile=coverage.out
-  - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+  - go test -v -covermode=count -coverprofile=cover.out
+  - $HOME/gopath/bin/goveralls -coverprofile=cover.out -service=travis-ci -repotoken $COVERALLS_TOKEN
   - pwd
   - ls
 
