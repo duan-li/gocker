@@ -10,10 +10,10 @@ import (
 var runCommand = cli.Command{
 	Name: "run",
 	Usage: `Create a container with namespace and cgroups limit
-			mydocker run -ti [command]`,
+			mydocker run -it [command]`,
 	Flags: []cli.Flag{
 		cli.BoolFlag{
-			Name:  "ti",
+			Name:  "it",
 			Usage: "enable tty",
 		},
 	},
@@ -22,7 +22,7 @@ var runCommand = cli.Command{
 			return fmt.Errorf("Missing container command")
 		}
 		cmd := context.Args().Get(0)
-		tty := context.Bool("ti")
+		tty := context.Bool("it")
 		Run(tty, cmd)
 		return nil
 	},
