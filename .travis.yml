@@ -19,8 +19,8 @@ script:
   - ls
   - go test ./...
   - go build .
-  - go test -v -covermode=count -coverprofile=cover.out
-  - $HOME/go/bin/goveralls -coverprofile=cover.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+  - go test -v -covermode=count -coverprofile=coverage.out
+  - goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
   - pwd
   - ls
 

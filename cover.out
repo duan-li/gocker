@@ -1,7 +1,0 @@
-mode: set
-gocker/container/init.go:9.67,15.66 5 1
-gocker/container/init.go:18.2,18.12 1 1
-gocker/container/init.go:15.66,17.3 1 1
-gocker/container/container_process.go:9.59,16.9 4 1
-gocker/container/container_process.go:21.2,21.12 1 1
-gocker/container/container_process.go:16.9,20.3 3 1
