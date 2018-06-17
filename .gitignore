@@ -4,3 +4,4 @@ resources/*
 vendor
 vendor/*
 gocker
+coverage.out
