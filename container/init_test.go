@@ -6,7 +6,7 @@ import (
 )
 
 func TestRunContainerInitProcess(t *testing.T) {
-	command := "/bin/sh"
+	command := "fake-command"
 	args := []string{}
 	init := RunContainerInitProcess(command, args)
 
