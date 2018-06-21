@@ -8,6 +8,7 @@ import (
 
 // NewParentProcess : Create a paranet process
 func NewParentProcess(tty bool, command string) *exec.Cmd {
+	// initCommand RunContainerInitProcess
 	args := []string{"init", command}
 	cmd := exec.Command("/proc/self/exe", args...)
 	cmd.SysProcAttr = &syscall.SysProcAttr{
