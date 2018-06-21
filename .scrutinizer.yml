@@ -1,0 +1,7 @@
+build:
+    environment:
+        go: 'go1.9'
+    dependencies:
+        override:
+            - curl https://glide.sh/get | sh
+            - glide install

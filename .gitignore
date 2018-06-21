@@ -1,3 +1,7 @@
 resources
 resources/*
 .DS_Store
+vendor
+vendor/*
+gocker
+coverage.out

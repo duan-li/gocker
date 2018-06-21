@@ -1,0 +1,32 @@
+language: go
+
+go:
+  - 1.9.x
+  - master
+  - tip
+
+sudo: false
+
+before_install:
+  - curl https://glide.sh/get | sh
+
+install:
+  - go get golang.org/x/tools/cmd/cover
+  - go get github.com/mattn/goveralls
+  - glide install
+
+script:
+  - ls
+  - go test -covermode=count -coverprofile=coverage.out ./container/
+  - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+  - go build .
+  - pwd
+  - ls
+
+
+notifications:
+  email:
+    recipients:
+      - inputx@gmail.com
+    on_success: change # default: change
+    on_failure: always # default: always

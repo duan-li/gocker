@@ -1,0 +1,43 @@
+hash: 03bc44c5198f96587d369ef9b32cef2412c65e00a694144cf871fbea08d6da2f
+updated: 2018-06-16T13:28:32.277132271Z
+imports:
+- name: github.com/dmgk/faker
+  version: 43454d133ca96960e67f5ecb86c9a67d9c7a145a
+  subpackages:
+  - locales
+- name: github.com/inputx/gocker
+  version: 60301a668443b17c09fe7706e7e50503eba6eb99
+  subpackages:
+  - container
+- name: github.com/inputx/mydocker
+  version: d7511e737733899663b274e508ebd2a4c833b362
+  subpackages:
+  - container
+- name: github.com/sirupsen/logrus
+  version: c155da19408a8799da419ed3eeb0cb5db0ad5dbc
+- name: github.com/Sirupsen/logrus
+  version: 446d1c146faa8ed3f4218f056fcd165f6bcfda81
+- name: github.com/stretchr/testify
+  version: f35b8ab0b5a2cef36673838d662e249dd9c94686
+  subpackages:
+  - assert
+- name: github.com/urfave/cli
+  version: cfb38830724cc34fedffe9a2a29fb54fa9169cd1
+- name: golang.org/x/crypto
+  version: a8fb68e7206f8c78be19b432c58eb52a6aa34462
+  subpackages:
+  - ssh/terminal
+- name: golang.org/x/sys
+  version: 37707fdb30a5b38865cfb95e5aab41707daec7fd
+  subpackages:
+  - unix
+  - windows
+testImports:
+- name: github.com/davecgh/go-spew
+  version: 8991bc29aa16c548c550c7ff78260e27b9ab7c73
+  subpackages:
+  - spew
+- name: github.com/pmezard/go-difflib
+  version: 792786c7400a136282c1664665ae0a8db921c6c2
+  subpackages:
+  - difflib
