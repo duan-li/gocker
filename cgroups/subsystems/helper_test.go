@@ -1,7 +1,6 @@
 package subsystems
 
 import (
-	"fmt"
 	faker "github.com/dmgk/faker"
 	assert "github.com/stretchr/testify/assert"
 	"testing"
