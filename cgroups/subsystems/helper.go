@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// FindCgroupMountpoint : find cgroup mount point
+// FindCgroupMountpoint : by using /proc/self/mountinfo, find out directory of some subsystem's hierarchy cgroup roolt node
 func FindCgroupMountpoint(subsystem string) string {
 	f, err := os.Open("/proc/self/mountinfo")
 	if err == nil {
@@ -30,7 +30,7 @@ func FindCgroupMountpoint(subsystem string) string {
 	return ""
 }
 
-// GetCgroupPath : get cgroup path
+// GetCgroupPath : find cgroup absolute path in fs
 func GetCgroupPath(subsystem string, cgroupPath string, autoCreate bool) (string, error) {
 	cgroupRoot := FindCgroupMountpoint(subsystem)
 	_, err := os.Stat(path.Join(cgroupRoot, cgroupPath))
