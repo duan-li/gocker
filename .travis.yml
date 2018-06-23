@@ -7,18 +7,20 @@ sudo: false
 
 before_install:
   - curl https://glide.sh/get | sh
-
-install:
+  - go get github.com/modocache/gover
   - go get golang.org/x/tools/cmd/cover
   - go get github.com/mattn/goveralls
+
+install:
+
   - glide install
 
 script:
   - ls
-  - go test -covermode=count -coverprofile=coverage-container.out ./container/
-  - go test -covermode=count -coverprofile=coverage-subsystems.out ./cgroups/subsystems
-  - $HOME/gopath/bin/goveralls -coverprofile=coverage-container.out -service=travis-ci -repotoken $COVERALLS_TOKEN
-  - $HOME/gopath/bin/goveralls -coverprofile=coverage-subsystems.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+  - go test -covermode=count -coverprofile=coverage-container.coverprofile  ./container/
+  - go test -covermode=count -coverprofile=coverage-subsystems.coverprofile  ./cgroups/subsystems
+  - $HOME/gopath/bin/gover
+  - $HOME/gopath/bin/goveralls -coverprofile=gover.coverprofile -service=travis-ci -repotoken $COVERALLS_TOKEN
   - go build .
   - pwd
   - ls

@@ -5,3 +5,4 @@ vendor
 vendor/*
 gocker
 coverage.out
+*coverprofile
