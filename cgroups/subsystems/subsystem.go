@@ -1,14 +1,16 @@
 package subsystems
 
+// ResourceConfig : system resource config data type
 type ResourceConfig struct {
 	// memroy limitation
 	MemoryLimit string
 	// priority of cpu usage
-	CpuShare string
+	CPUShare string
 	// No of cpu cores
-	CpuSet string
+	CPUSet string
 }
 
+// Subsystem : subsystem for container
 type Subsystem interface {
 	//get subsystem name, like cpu, memory
 	Name() string
@@ -21,6 +23,7 @@ type Subsystem interface {
 }
 
 var (
+	// SubsystemsIns : subsystem data set
 	SubsystemsIns = []Subsystem{
 	// 		&MemorySubSystem{},
 	}
