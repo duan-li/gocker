@@ -2,8 +2,6 @@ package subsystems
 
 import (
 	assert "github.com/stretchr/testify/assert"
-	"os"
-	"path"
 	"testing"
 )
 
