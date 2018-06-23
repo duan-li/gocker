@@ -33,3 +33,10 @@ func TestNewParentProcessTtyFalse(t *testing.T) {
 	assert.Nil(t, cmd.Stdout, "cmd tty error (Stdout)")
 	assert.Nil(t, cmd.Stderr, "cmd tty error (Stderr)")
 }
+
+func TestPipe(t *testing.T) {
+	testRead, testWrite, testErr := Pipe()
+	assert.NotNil(t, testRead, "read pipe is wrong")
+	assert.NotNil(t, testWrite, "wrint pipe is wrong")
+	assert.Nil(t, testErr, "err pipe is wrong")
+}

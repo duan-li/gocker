@@ -22,3 +22,12 @@ func NewParentProcess(tty bool, command string) *exec.Cmd {
 	}
 	return cmd
 }
+
+// Pipe : system pipe
+func Pipe() (*os.File, *os.File, error) {
+	read, write, err := os.Pipe()
+	if err == nil {
+		return read, write, nil
+	}
+	return nil, nil, err
+}
