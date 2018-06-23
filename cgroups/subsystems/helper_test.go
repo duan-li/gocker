@@ -27,3 +27,12 @@ func TestGetCgroupPath(t *testing.T) {
 	path, err = GetCgroupPath("memory", cgroupPath, true)
 	assert.NotNil(t, err)
 }
+
+func TestGetCgroupPathError(t *testing.T) {
+	subsystem := "memory"
+	cgroupPath := "memory1"
+	path, err := GetCgroupPath(subsystem, cgroupPath, true)
+	assert.Equal(t, path, "", "cgroup path is woring")
+	t.Logf("%#v", err)
+	assert.NotNil(t, err)
+}
