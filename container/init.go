@@ -18,3 +18,15 @@ func RunContainerInitProcess(command string, args []string) error {
 	}
 	return nil
 }
+
+// readUserCommand : retrieve user command
+func readUserCommand() []string {
+	pipe := os.NewFile(uintptr(3), "pipe")
+	msg, err := ioutil.ReadAll(pipe)
+	if err != nil {
+		log.Errorf("init read pipe error %v", err)
+		return nil
+	}
+	msgStr := string(msg)
+	return strings.Split(msgStr, " ")
+}
