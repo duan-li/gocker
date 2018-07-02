@@ -12,7 +12,6 @@ before_install:
   - go get github.com/mattn/goveralls
 
 install:
-
   - glide install
 
 script:

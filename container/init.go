@@ -4,6 +4,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"os"
 	"syscall"
+	"io/ioutil"
+	"strings"
 )
 
 // RunContainerInitProcess : Start container init process
