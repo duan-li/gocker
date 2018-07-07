@@ -1,9 +1,10 @@
 package: gocker
 import:
 - package: github.com/inputx/gocker
-  version: features/001-command-run
+  version: features/002-add-cgroups
   subpackages:
   - container
+  - cgroups/subsystems
 - package: github.com/sirupsen/logrus
   version: ~1.0.5
 - package: github.com/urfave/cli
@@ -16,3 +17,4 @@ import:
   version: ~1.2.2
   subpackages:
   - assert
+  - mock

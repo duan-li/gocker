@@ -17,6 +17,7 @@ install:
 script:
   - ls
   - go test -covermode=count -coverprofile=coverage-container.coverprofile  ./container/
+  - go test -covermode=count -coverprofile=coverage-cgroups.coverprofile  ./cgroups
   - go test -covermode=count -coverprofile=coverage-subsystems.coverprofile  ./cgroups/subsystems
   - $HOME/gopath/bin/gover
   - $HOME/gopath/bin/goveralls -coverprofile=gover.coverprofile -service=travis-ci -repotoken $COVERALLS_TOKEN

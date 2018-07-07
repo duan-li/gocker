@@ -1,17 +1,14 @@
-hash: 03bc44c5198f96587d369ef9b32cef2412c65e00a694144cf871fbea08d6da2f
-updated: 2018-06-16T13:28:32.277132271Z
+hash: a14257cafa072bd42caff627a0ecc36631b29d5d836d714ceb515979c4cd4e12
+updated: 2018-07-07T05:17:45.690405573Z
 imports:
 - name: github.com/dmgk/faker
   version: 43454d133ca96960e67f5ecb86c9a67d9c7a145a
   subpackages:
   - locales
 - name: github.com/inputx/gocker
-  version: 60301a668443b17c09fe7706e7e50503eba6eb99
+  version: c29826764040ae61a5437b6d293b2e951ea6884c
   subpackages:
-  - container
-- name: github.com/inputx/mydocker
-  version: d7511e737733899663b274e508ebd2a4c833b362
-  subpackages:
+  - cgroups/subsystems
   - container
 - name: github.com/sirupsen/logrus
   version: c155da19408a8799da419ed3eeb0cb5db0ad5dbc
@@ -21,6 +18,7 @@ imports:
   version: f35b8ab0b5a2cef36673838d662e249dd9c94686
   subpackages:
   - assert
+  - mock
 - name: github.com/urfave/cli
   version: cfb38830724cc34fedffe9a2a29fb54fa9169cd1
 - name: golang.org/x/crypto
