@@ -22,3 +22,13 @@ func NewParentProcess(tty bool, command string) *exec.Cmd {
 	}
 	return cmd
 }
+
+
+// CreatePipe : create system pipe between processes
+func CreatePipe() (*os.File, *os.File, error) {
+	read, write, err := os.Pipe()
+	if err != nil {
+		return nil, nil, err
+	}
+	return read, write, nil
+}
